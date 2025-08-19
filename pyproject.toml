@@ -1,0 +1,14 @@
+[project]
+name = "jogo com pygame"
+version = "0.1.0"
+description = "Projeto de jogo usando o pygame do python"
+authors = [
+  {name = "Jedson", email = "jedazevedo@gmail.com"}
+]
+dependencies = [
+  "pygame",
+  "pytest",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
