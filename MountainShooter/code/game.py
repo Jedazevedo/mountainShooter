@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 import pygame
 from MountainShooter.code.menu import Menu
-from MountainShooter.code.const import WIN_HEIGHT, WIN_WIDTH
+from MountainShooter.code.const import WIN_HEIGHT, WIN_WIDTH, MENU_OPTION
+from MountainShooter.code.level import Level
 
 class Game:
     def __init__(self):
@@ -13,6 +14,15 @@ class Game:
 
         while True:
             menu = Menu(self.window)
-            menu.run()
+            menu_return = menu.run()
+
+            if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2]]:
+                level = Level(self.window, name='Level1', game_mode=menu_return )
+                level_return = level.run()
+
+            elif menu_return == MENU_OPTION[-1]:
+                pygame.quit()
+                quit()
+
 
 
