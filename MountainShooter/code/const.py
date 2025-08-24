@@ -14,6 +14,7 @@ MENU_OPTION = (
     'EXIT'
 
 )
+# E 
 EVENT_ENEMY = pygame.USEREVENT + 1
 ENTITY_SPEED = {
     'Level1Bg0': 0,
