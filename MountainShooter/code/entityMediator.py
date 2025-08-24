@@ -1,11 +1,21 @@
 from MountainShooter.code.entity import Entity
 from MountainShooter.code.enemy import Enemy
+from MountainShooter.code.const import WIN_WIDTH
+from MountainShooter.code.player_shot import PlayerShot
+from MountainShooter.code.enemy_shot import EnemyShot
+
 class EntityMediator:
 
     @staticmethod
     def __verify_collision_window(ent: Entity):
         if isinstance(ent, Enemy):
-            if ent.rect.right <0:
+            if ent.rect.right <= 0:
+                ent.health = 0
+        if isinstance(ent, PlayerShot):
+            if ent.rect.left >= WIN_WIDTH:
+                ent.health = 0
+        if isinstance(ent, EnemyShot):
+            if ent.rect.right <= 0:
                 ent.health = 0
 
     @staticmethod

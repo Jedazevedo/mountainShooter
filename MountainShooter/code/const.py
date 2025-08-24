@@ -25,7 +25,9 @@ ENTITY_SPEED = {
     'Level1Bg5': 5,
     'Level1Bg6': 6,
       'Player1' : 3,
+      'Player1Short':3,
       'Player2' : 3,
+      'Player2Short':3,
       'Enemy1': 1,
       'Enemy2':2,
 
@@ -116,6 +118,8 @@ PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                     'Player2': pygame.K_d}
 PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
                     'Player2': pygame.K_LCTRL}
+
+
 
 # S
 SPAWN_TIME = 4000
